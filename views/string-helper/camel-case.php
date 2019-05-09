@@ -3,18 +3,8 @@
 /* @var $text string */
 
 use yii\helpers\Html;
-use yii\helpers\StringHelper;
+use yii\helpers\Inflector;
 
 ?>
 
-<?=
-implode(
-    StringHelper::explode(
-        Html::decode($text),
-        '_',
-        function($value) {
-            return StringHelper::mb_ucfirst($value);
-        }
-    )
-)
-?>
+<?=Inflector::camelize(Html::encode($text))?>
