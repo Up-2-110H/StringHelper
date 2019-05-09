@@ -22,7 +22,6 @@ class StringHelperController extends Controller
         return $this->render('camel-case', ['text' => $text]);
     }
 
-
     public function actionTransliterate($text='Купи слона')
     {
         return $this->render('transliterate', ['text' => $text]);
