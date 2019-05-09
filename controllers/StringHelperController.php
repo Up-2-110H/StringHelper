@@ -16,4 +16,10 @@ class StringHelperController extends Controller
 
         return $this->render('truncate-words', ['text' => $text]);
     }
+
+    public function actionCamelCase($text='created_at')
+    {
+        return $this->render('camel-case', ['text' => $text]);
+    }
+
 }
