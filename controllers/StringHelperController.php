@@ -16,4 +16,9 @@ class StringHelperController extends Controller
 
         return $this->render('truncate-words', ['text' => $text]);
     }
+
+    public function actionTransliterate($text='Купи слона')
+    {
+        return $this->render('transliterate', ['text' => $text]);
+    }
 }
